@@ -25,7 +25,7 @@ Typical workloads include:
 - **Human Runtime**: the critical path stays human-driven and directly accountable
 - **Agent Augmentation**: the operator can call `OpenClaw` or other agents on demand
 - **Deadline-Aware Scheduling**: prioritization shifts with urgency, interruptions, and delivery windows
-- **Low Monthly Cost**: in this repo’s fictional pricing model, the standard plan is `¥400 / month`
+- **Flexible Pricing**: strictly above `¥0`, varying by lab, familiarity, and snack policy
 
 ## Skills
 

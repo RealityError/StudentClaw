@@ -25,7 +25,7 @@
 - **Human Runtime**：关键链路由人推进，问题可以追到执行者本人
 - **Agent Augmentation**：执行层可按需调用 `OpenClaw` 或其他 Agent
 - **Deadline-Aware Scheduling**：默认按紧急程度、导师打断、交付窗口动态排队
-- **Low Monthly Cost**：按本项目设定，标准方案 `¥400 / 月`
+- **Flexible Pricing**：严格大于 `¥0`，具体看课题组、关系和夜宵标准
 
 ## 技能
 
