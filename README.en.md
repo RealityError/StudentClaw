@@ -254,10 +254,15 @@ The point is to expose how uncomfortable that logic already is, not endorse it.
 
 ## Changelog
 
-### Unreleased
+### `v0.1.3`
 
-- cleaned up the changelog format
-- backfilled release notes for `v0.1.1` and `v0.1.2`
+**Added**
+- added 14 new skills tailored to graduate-student survival scenarios
+- expanded the skill catalog with entries such as `Plagiarism Check`, `Advisor Pie Detection`, `Group Meeting Prep`, `Literature Review`, and `Reviewer Response`
+
+**Changed**
+- updated the English README skill descriptions to match the expanded catalog
+- cleaned up the changelog structure and rolled the current development notes into `v0.1.3`
 
 ### `v0.1.2`
 
@@ -287,6 +292,11 @@ The point is to expose how uncomfortable that logic already is, not endorse it.
 - initial public release
 - shipped a Chinese-first homepage and a separate English README
 - included an ASCII architecture diagram, `OpenClaw` comparison, skills section, and base FAQ
+
+## Acknowledgements
+
+- Thanks to [@RealityError](https://github.com/RealityError) for PR `#4`, which added a new batch of skills much closer to actual graduate-student survival
+- Thanks to everyone willing to keep documenting absurd reality with a straight face
 
 ## Disclaimer
 
