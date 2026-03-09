@@ -1,4 +1,4 @@
-# StudentClaw
+# StudentClaw 真正的能工智人
 
 [English](README.en.md)
 
