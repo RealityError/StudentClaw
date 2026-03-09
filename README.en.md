@@ -38,13 +38,31 @@ Typical workloads include:
 | `First-Draft First` | Produces a usable first pass, then tightens it through feedback loops. | Drafting, outlining, explanatory writing | Supported |
 | `Human Saturation Fallback` | Switches to external agents when the human execution layer is overloaded. | Bulk rewriting, structured generation, repetitive work | Default on |
 
+## Requirements
+
+| Item | Requirement |
+| --- | --- |
+| Operating System | A master's student's struggling laptop |
+| Task Entry | A working WeChat conversation |
+| Required Access | At least one of: `Advisor API` or `Professor API` |
+| Optional Boost | `OpenClaw` or another external agent |
+| Network | Good enough to send messages and hopefully receive replies |
+
+### How to obtain `Advisor API` / `Professor API`
+
+- This project does **not** ship with `Advisor API` or `Professor API`
+- These permissions usually require you to **bring your own lab relationship** or receive access from your research group
+- If your environment has neither `Advisor API` nor `Professor API`, many high-priority workflows will not complete end-to-end
+- In short: the missing prerequisite is not the bug; the missing documentation was
+
 ## Quick Start
 
-1. Send the task, context, and delivery requirements through WeChat  
-2. Let the routing layer decide priority and execution path  
-3. `Student Runtime` handles execution, follow-through, and delivery  
-4. Bring in external agents when automation becomes useful  
-5. Return results and iterate until the task is closed
+1. Make sure you have at least one working privilege: `Advisor API` or `Professor API`  
+2. Send the task, context, and delivery requirements through WeChat  
+3. Let the routing layer decide priority and execution path  
+4. `Student Runtime` handles execution, follow-through, and delivery  
+5. Bring in external agents when automation becomes useful  
+6. Return results and iterate until the task is closed
 
 ## Architecture
 
@@ -103,7 +121,7 @@ Typical workloads include:
 | Task entry | WeChat-first | Multi-channel messaging + local control plane |
 | Control plane | Task routing, human judgment, and strategic disappearance | Local-first Gateway |
 | Extensibility | Human tool use, agent fallback, and last-minute overtime | Tools, skills, routing, and multi-agent workflows |
-| Cost structure | A fixed fictional `¥400 / month`, plus hidden sleep damage | Self-hosted software plus model / deployment costs |
+| Cost structure | Strictly above `¥0`, varying by lab, familiarity, and late-night snack policy | Self-hosted software plus model / deployment costs |
 | Failure mode | Seen-but-no-reply, advisor interruptions, deadline compression | Configuration, permission, runtime, and security-policy issues |
 | Best fit | High-pressure tasks that need human fallback | Long-running personal AI assistant workflows |
 
@@ -111,7 +129,8 @@ Typical workloads include:
 
 | Item | Description |
 | --- | --- |
-| Standard Plan | `¥400 / month` |
+| Standard Plan | `> ¥0 / month` |
+| Pricing Basis | Varies by lab, funding mood, relationship quality, and snack expectations |
 | Token Policy | Theoretically unmetered, practically limited by how long a human can keep going |
 | Response SLA | Fast on a good day, “I saw it” on a bad one |
 | Escalation Policy | Brings in `OpenClaw` or other agents when the human layer is cooked |
@@ -134,6 +153,16 @@ Please do not actually try to place an order.
 
 Within the premise of the joke, yes.  
 As a real shipped product feature, no.
+
+### Can I use this without `Advisor API` or `Professor API`?
+
+Not well.  
+Some baseline paths may exist, but many critical workflows assume at least one advisor-level permission.
+
+### Where do I get `Advisor API` / `Professor API` access?
+
+The project does not provide it.  
+Usually you either bring it yourself, receive it from your lab, or earn it through long-term relationship maintenance.
 
 ### Why compare it with `OpenClaw`?
 
