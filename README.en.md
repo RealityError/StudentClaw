@@ -64,6 +64,30 @@ Typical workloads include:
 5. Bring in external agents when automation becomes useful  
 6. Return results and iterate until the task is closed
 
+## When Local Run Fails
+
+If your first local attempt at `StudentClaw` fails, that usually does not mean the system is down.  
+More often, the privileges are incomplete, the context is too messy, or the graduate-student laptop surrendered first.
+
+In the current version, local failure usually falls into one of these buckets:
+
+- no `Advisor API` and no `Professor API`
+- WeChat entry works, but the task description is too fragmented to route cleanly
+- external agents are unavailable while the human lane is already saturated
+- advisor interruption, deadline compression, and fan noise all arrive at the same time
+
+In short, local failure is usually an environment problem, not an installation-technique problem.
+
+## Troubleshooting
+
+| Symptom | Common Cause | Suggested Action |
+| --- | --- | --- |
+| Crashes immediately on start | Missing `Advisor API` or `Professor API` | Obtain at least one advisor-level privilege first |
+| Tasks are sent but nobody moves | The flow got stuck in `Seen-But-No-Reply`, advisor interruption, or deadline pressure | Add missing context or wait for priority to settle |
+| Output is painfully slow | Only the human lane is active and the machine is weak | Bring in `OpenClaw` or another external agent |
+| Three revision rounds later, still no closure | The chat history is too fragmented and the task was never normalized | Run the equivalent of `Chat-to-Task` before continuing |
+| The machine freezes outright | Heat, memory pressure, or morale collapsed first | Lower concurrency and protect the core deliverable |
+
 ## Architecture
 
 ```text
@@ -172,6 +196,21 @@ Because most people immediately want to know how this thing is supposed to diffe
 
 No.  
 The point is to expose how uncomfortable that logic already is, not endorse it.
+
+## Changelog
+
+### Unreleased
+
+- added a `When Local Run Fails` section
+- added a `Troubleshooting` section
+- documented `Advisor API` / `Professor API` as hard prerequisites
+- normalized pricing language to “commonly `¥400 / month`, with variation”
+
+### `v0.1.0`
+
+- initial public release
+- shipped a Chinese-first homepage and a separate English README
+- included an ASCII architecture diagram, `OpenClaw` comparison, skills section, and base FAQ
 
 ## Disclaimer
 
